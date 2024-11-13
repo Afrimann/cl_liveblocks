@@ -4,7 +4,7 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-title: "api driven project",
+title: "LiveBlocks | Build collaborative experiences faster",
   description: "subject to change",
 };
 

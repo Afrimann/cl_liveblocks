@@ -1,5 +1,5 @@
 import React from 'react';
-import LongChartedData, { LongChartedData2 } from './LongChartedData';
+import LongChartedData from './LongChartedData';
 import Image from 'next/image';
 import ImageDisplay from './ImageDisplay';
 
@@ -78,14 +78,7 @@ const Showcase = () => {
                 </div>
             ))}
 
-            {/* Showcase 2 */}
-            <div className="showcase2">
-                {LongChartedData2.map((a, i) => (
-                    <div key={i}>
-                        {/* Add content for showcase 2 here */}
-                    </div>
-                ))}
-            </div>
+         
         </div>
     );
 };

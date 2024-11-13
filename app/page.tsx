@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Showcase from './components/Showcase'
+import { LongChartedData2 } from './components/LongChartedData'
+import Image from 'next/image'
+import PreFooter from './components/PreFooter'
 
 
 const page = () => {
@@ -99,10 +102,50 @@ const page = () => {
       </section>
 
 
-      <section className='tools h-[200vh] w-[65%] showcaseBorder border-[1px] mb-[250px] mx-auto'>
 
+      <section className='tools h-[200vh] w-[65%] showcaseBorder border-[1px] mx-auto text-white'>
+        {/* Showcase 2 */}
+        <div className="showcase2 h-[100%] w-[100%] flex flex-col">
+          {/* first box */}
+          <div className='firstBox text-[20px] w-[100%] h-[35%] text-white p-6'>
+            <span
+              className='font-bold'
+            >{LongChartedData2.firstDivText.firstLink}</span>
+            <p className='text-[rgb(137,136,140)]'>{LongChartedData2.firstDivText.dormantText}
+              <span className='text-white'>{LongChartedData2.firstDivText.secondLink}</span>
+            </p>
+            <p>{LongChartedData2.firstDivText.thirdLink}
+              <span className='text-[rgb(137,136,140)]'> {LongChartedData2.firstDivText.lastText}</span>
+            </p>
+          </div>
+
+          {/* second box */}
+          <div className='secondBox h-auto w-[100%] md:h-[30%]'>
+            <div className='h-[100%] w-[100%] border-[1px] showcaseBorder flex flex-col  md:flex-row'>
+              {LongChartedData2.secondDivText.map((item, index) => (
+                <div key={index} className='showcaseBorder w-[100%] border-b-[1px]  border-opacity-15 p-6 text-[18px]'>
+                  <h2 className='font-bold'>{item.head}</h2>
+                  <span className=' text-[rgb(137,136,140)] w-[50%] break-words'>{item.spanText}</span>
+                  <Image src={item.image} alt={`Image for ${item.head}`}/>
+                </div>
+              ))}
+            </div>
+          </div>
+
+
+
+          {/* third box */}
+          <div className='thirdBox h-[35%] w-[100%] p-6'>
+            <span className='text-[20px] font-bold'>{LongChartedData2.lastDiv.text.link}</span>
+            <span className='block w-[50%] md:w-[30%] text-[rgb(137,136,140)] text-[20px]'>{LongChartedData2.lastDiv.text.spanText}</span>
+            <Image src={LongChartedData2.lastDiv.image} alt={`Image for ${LongChartedData2.lastDiv.text.link}`} />
+          </div>
+        </div>
 
       </section>
+
+
+
       <section className='afterShowcase p-4 flex flex-col items-center pb-[70px]'>
         <div className='w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl pb-4'>
           <h1 className='text-white font-normal text-[24px] md:text-[26px] pb-6'>
@@ -119,6 +162,9 @@ const page = () => {
         </div>
       </section>
 
+
+    {/* Prefooter */}
+    {/* <PreFooter /> */}
     </div>
   )
 }

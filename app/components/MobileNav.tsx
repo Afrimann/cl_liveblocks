@@ -20,7 +20,7 @@ const MobileNav = ({ closeMobileNav, handleMouseEnter, handleMouseLeave, hovered
                     </div>
 
                 </div>
-                <div className="navitems mt-[200px]">
+                <div className="navitems mt-[130px]">
                     {['Product', 'Resources', 'Docs', 'Pricing'].map((item, index) => (
                         <li className='editList pb-10' key={index}>
                             <a
@@ -34,6 +34,10 @@ const MobileNav = ({ closeMobileNav, handleMouseEnter, handleMouseLeave, hovered
                             </a>
                         </li>
                     ))}
+                     <div className="redirectLinks flex flex-col gap-4 justify-left items-start text-white text-center text-[30px] cursor-pointer transition-opacity duration-500">
+                     <a href="#">Request Demo</a>
+                     <a href="#">SignUp / Login</a>
+                     </div>
                 </div>
             </div>
         </div>

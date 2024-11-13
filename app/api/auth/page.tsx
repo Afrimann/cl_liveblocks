@@ -55,11 +55,11 @@ const page = () => {
 
   return (
     <div className='auth'>
-      <Login 
+      <Login
 
       />
-      
-      <Register 
+
+      <Register
 
       />
 
