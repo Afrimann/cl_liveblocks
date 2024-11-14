@@ -6,6 +6,7 @@ import Showcase from './components/Showcase'
 import { LongChartedData2 } from './components/LongChartedData'
 import Image from 'next/image'
 import PreFooter from './components/PreFooter'
+import Footer from './components/Footer'
 
 
 const page = () => {
@@ -164,7 +165,8 @@ const page = () => {
 
 
     {/* Prefooter */}
-    {/* <PreFooter /> */}
+    <PreFooter />
+    <Footer />
     </div>
   )
 }
