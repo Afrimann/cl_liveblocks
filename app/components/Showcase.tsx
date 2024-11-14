@@ -27,7 +27,7 @@ const Showcase = () => {
                                 <h1 className='text-white text-[20px] md:text-[22px] font-normal'>
                                     {a.bigHeading}
                                 </h1>
-                                <h2 className='text-gray-400 text-[18px] md:text-[20px] max-w-full md:max-w-full lg:max-w-[13rem] font-normal'>
+                                <h2 className='text-[rgb(142,141,145)] text-[18px] md:text-[20px] max-w-full md:max-w-full lg:max-w-[13rem] font-normal'>
                                     {a.bigSpan}
                                 </h2>
                                 <button className='button lg-button p-2 px-3 mt-8'>{a.bigButton}</button>
@@ -42,31 +42,31 @@ const Showcase = () => {
                                     <h1 className='text-white text-[18px] md:text-[20px]'>
                                         {a.smallBoxHead1}
                                     </h1>
-                                    <h2>{a.smallBoxSpan1}</h2>
+                                    <h2 className='text-[rgb(142,141,145)]'>{a.smallBoxSpan1}</h2>
                                 </div>
                                 {/* Second small box */}
                                 <div className='flex-1 p-4 md:p-6 lg:p-8 showcaseBorder border-[1px]'>
                                     <h1 className='text-white text-[18px] md:text-[20px]'>
                                         {a.smallBoxHead2}
                                     </h1>
-                                    <h2>{a.smallBoxSpan2}</h2>
+                                    <h2 className='text-[rgb(142,141,145)]'>{a.smallBoxSpan2}</h2>
                                 </div>
                             </div>
 
                             {/* Middle small box */}
                             <div className='w-full h-auto lg:h-[10%] flex items-center justify-center border-[1px] border-gray-100 border-opacity-15'>
-                                <span className='text-center'>
+                                <span className='text-center text-[rgb(142,141,145)]'>
                                     Fully integrated with Notifications and Text Editor
-                                    </span>
+                                </span>
                             </div>
 
                             {/* Large bottom box */}
                             <div className='w-full h-auto lg:h-[50%] border-[1px] border-gray-100 border-opacity-15 p-4 lg:p-6'>
                                 <div>
                                     <span className="text-white text-[20px]">
-                                    Endlessly customizable
+                                        Endlessly customizable
                                     </span>
-                                    <p className='max-w-full lg:max-w-[20rem]'>Add a perfectly on-brand commenting system to any part of your product.</p>
+                                    <p className='max-w-full lg:max-w-[20rem] text-[rgb(142,141,145)]'>Add a perfectly on-brand commenting system to any part of your product.</p>
                                 </div>
                                 {/* state controlled image display */}
                                 <div className='imageDisplay'>
@@ -78,7 +78,7 @@ const Showcase = () => {
                 </div>
             ))}
 
-         
+
         </div>
     );
 };

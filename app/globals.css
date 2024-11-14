@@ -31,4 +31,7 @@
   .showcaseBorder{
     @apply border-r-[1px] border-gray-100 border-opacity-15
   }
+  .input{
+    @apply flex flex-col mb-2 gap-1 md:gap-1 lg:gap-2
+  }
 }

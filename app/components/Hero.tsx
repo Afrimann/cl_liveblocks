@@ -31,25 +31,21 @@ const Hero = ({ mobileNav, closeMobileNav, handleMouseEnter, handleMouseLeave, h
         handleMouseLeave={handleMouseLeave}
         hoveredItem={hoveredItem}
       />}
-      {/* Event Banner */}
-      <div className='p-2 w-[300px] h-10 flex flex-row items-center justify-between bg-[#1464ff] rounded-full mb-6'>
-        <span className='text-[15px] text-white'>SEP 17-19</span>
 
-        <span className='text-[15px] text-white'>Next.js Template Week</span>
-        <span>
+      <div className="p-2 w-[320px] h-10 flex items-center justify-between bg-[#1464ff] rounded-full mb-6 space-x-3">
+        <span className="text-sm font-semibold text-white">SEP 17-19</span>
+        <span className="text-sm font-semibold text-white">Next.js Template Week</span>
+        <span className="p-1 bg-white rounded-full flex items-center justify-center">
           <Image
-            src={right}
-            alt='arr'
-            width={18}
-            height={20}
-            // style={{
-            //   filter: 'invert(43%) sepia(100%) saturate(2477%) hue-rotate(204deg) brightness(94%) contrast(90%)',
-            //   transform: 'rotate(270deg)',
-            // }}
-            className='bg-white rounded-full'
+            src={right} // Assuming you have imported the image as 'right'
+            alt="arrow"
+            width={12}
+            height={12}
+            className="text-[#1464ff] -rotate-90" // Rotate to match the design
           />
         </span>
       </div>
+
 
       {/* Hero Showcase */}
       <div className='hero-showcase text-center'>
@@ -115,8 +111,8 @@ const Hero = ({ mobileNav, closeMobileNav, handleMouseEnter, handleMouseLeave, h
           }
         </div>
         <div className='block md:hidden'>
-        {!showFullCompanies && <MoreCompanies />}
-      </div>
+          {!showFullCompanies && <MoreCompanies />}
+        </div>
       </div>
 
       {/* advertise liveblock (problem statement and offer) */}

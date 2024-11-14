@@ -39,7 +39,7 @@ const Header = ({ handleMouseEnter, handleMouseLeave, hoveredItem, openMobileNav
             ))}
           </div>
           <div className='navItems_2'>
-            <a className='pr-8 text-[15px]' href="#">Book a Demo</a>
+            <a className='pr-8 text-[15px]' href="/demo">Book a Demo</a>
             <button className='signInBtn bg-[#272727] px-3 py-1.5 rounded-md text-[15px] opacity-100 hover:opacity-80 duration-300'
 
             ><a href='#'>Sign In</a></button>

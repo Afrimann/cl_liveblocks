@@ -7,24 +7,18 @@ import { LongChartedData2 } from './components/LongChartedData'
 import Image from 'next/image'
 import PreFooter from './components/PreFooter'
 import Footer from './components/Footer'
+import { useHeader } from './useHeader'
+import MobileNav from './components/MobileNav'
 
 
 const page = () => {
-  const [mobileNav, setMobileNav] = useState<boolean>(false)
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const { openMobileNav, handleMouseEnter, handleMouseLeave, hoveredItem,mobileNav,setMobileNav } = useHeader();
   const [showFullCompanies, setShowFullCompanies] = useState<boolean>(false)
   const [isMobile, setIsMobile] = useState(false);
 
-  const openMobileNav = () => {
-    setMobileNav(true)
-  }
   const closeMobileNav = () => {
     setMobileNav(false)
   }
-  // Function to handle mouse hover events
-  const handleMouseEnter = (item: string) => {
-    setHoveredItem(item);
-  };
 
   const [hoverTimeout, setHoverTimeout] = useState<number | null>(null);
 
@@ -56,10 +50,7 @@ const page = () => {
   };
 
 
-  // Function to handle mouse leave events
-  const handleMouseLeave = () => {
-    setHoveredItem(null);
-  };
+
   return (
     <div className='w-full h-auto mx-auto bg-[#000000] flex flex-col gap-20'>
       <div className='header fixed top-0 w-full z-20'>
@@ -69,6 +60,13 @@ const page = () => {
           handleMouseLeave={handleMouseLeave}
           hoveredItem={hoveredItem} />
       </div>
+
+      {mobileNav && <MobileNav
+      closeMobileNav={closeMobileNav}
+       handleMouseEnter={handleMouseEnter}
+       handleMouseLeave={handleMouseLeave} 
+       hoveredItem={hoveredItem}
+      />}
 
       <section className='hero h-auto md:mt-20'>
         <Hero
@@ -93,7 +91,7 @@ const page = () => {
           <h1 className='text-white font-normal text-[24px] md:text-[26px] pb-6'>
             Designed for developers.
           </h1>
-          <p className='text-gray-600 pb-5 text-[18px] md:text-[20px] lg:text-[22px]'>
+          <p className='text-[rgb(142,141,145)] pb-5 text-[18px] md:text-[20px] lg:text-[22px]'>
             Every API is carefully crafted to provide{' '}
             <span className='text-white'>the best developer experience.</span> Save
             heartache and ship faster. Let us handle the maintenance.
@@ -127,7 +125,7 @@ const page = () => {
                 <div key={index} className='showcaseBorder w-[100%] border-b-[1px]  border-opacity-15 p-6 text-[18px]'>
                   <h2 className='font-bold'>{item.head}</h2>
                   <span className=' text-[rgb(137,136,140)] w-[50%] break-words'>{item.spanText}</span>
-                  <Image src={item.image} alt={`Image for ${item.head}`}/>
+                  <Image src={item.image} alt={`Image for ${item.head}`} />
                 </div>
               ))}
             </div>
@@ -152,7 +150,7 @@ const page = () => {
           <h1 className='text-white font-normal text-[24px] md:text-[26px] pb-6'>
             The all‑in‑one collaboration platform.
           </h1>
-          <p className='text-gray-600 pb-5 text-[18px] md:text-[20px] lg:text-[22px]'>
+          <p className='text-[rgb(142,141,145)] pb-5 text-[18px] md:text-[20px] lg:text-[22px]'>
             Liveblocks is the world’s{' '}
             <span className='text-white'>most advanced platform</span> for{' '}
             <span className='text-white'>building</span>,{' '}
@@ -164,9 +162,9 @@ const page = () => {
       </section>
 
 
-    {/* Prefooter */}
-    <PreFooter />
-    <Footer />
+      {/* Prefooter */}
+      <PreFooter />
+      <Footer />
     </div>
   )
 }
