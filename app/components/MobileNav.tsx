@@ -35,7 +35,7 @@ const MobileNav = ({ closeMobileNav, handleMouseEnter, handleMouseLeave, hovered
                         </li>
                     ))}
                      <div className="redirectLinks flex flex-col gap-4 justify-left items-start text-white text-center text-[30px] cursor-pointer transition-opacity duration-500">
-                     <a href="#">Request Demo</a>
+                     <a href="/demo">Request Demo</a>
                      <a href="#">SignUp / Login</a>
                      </div>
                 </div>

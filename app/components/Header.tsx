@@ -12,7 +12,7 @@ interface Props {
 
 const Header = ({ handleMouseEnter, handleMouseLeave, hoveredItem, openMobileNav }: Props) => {
   return (
-    <div className=' w-full h-[14vh]  bg-[#000000] flex items-center p-8 md:p-5 lg:p-8 text-white border-b-[1px] border-gray-100 border-opacity-15'>
+    <div className=' w-full h-[12vh]  bg-[#000000] flex items-center p-8 md:p-5 lg:p-8 text-white border-b-[1px] border-gray-100 border-opacity-15'>
       <nav className='flex gap-8 items-center w-full justify-between'>
         <div className='logo'>
          <a href="/">
