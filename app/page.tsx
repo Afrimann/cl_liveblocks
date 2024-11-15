@@ -11,8 +11,9 @@ import { useHeader } from './useHeader'
 import MobileNav from './components/MobileNav'
 
 
-const page = () => {
-  const { openMobileNav, handleMouseEnter, handleMouseLeave, hoveredItem,mobileNav,setMobileNav } = useHeader();
+const Page = () => {
+  const header = useHeader()
+  const { openMobileNav, handleMouseEnter, handleMouseLeave, hoveredItem,mobileNav,setMobileNav } = header;
   const [showFullCompanies, setShowFullCompanies] = useState<boolean>(false)
   const [isMobile, setIsMobile] = useState(false);
 
@@ -169,4 +170,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

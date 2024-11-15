@@ -17,7 +17,7 @@ const Footer = () => {
                 <div key={index} className='mb-[20px]'>
                   <h2 className='font-bold mb-2'>{link.link.heading}</h2>
                   {link.link.links.map((a, i) => (
-                    <li className='editList text-[rgb(137,136,140)] font-normal pb-3 text-[14px]'>
+                    <li key={i} className='editList text-[rgb(137,136,140)] font-normal pb-3 text-[14px]'>
                       {a}
                     </li>
                   ))}
@@ -28,11 +28,11 @@ const Footer = () => {
           <div className='secondGroup'>
             {
               SecondGroup.map((link, index) => (
-                <div className='mb-[20px]'>
+                <div key={index} className='mb-[20px]'>
                   <h2 className='font-bold mb-2'>{link.link.heading}</h2>
                   {
                     link.link.links.map((a, i) => (
-                      <li className='editList text-[rgb(137,136,140)] font-normal pb-3 text-[14px] '>{a}</li>
+                      <li key={i} className='editList text-[rgb(137,136,140)] font-normal pb-3 text-[14px] '>{a}</li>
                     ))
                   }
                 </div>
@@ -43,11 +43,11 @@ const Footer = () => {
           <div className='thirdGroup'>
             {
               ThirdGroup.map((link, index) => (
-                <div className='mb-[20px]'>
+                <div key={index} className='mb-[20px]'>
                   <h2 className='font-bold mb-2'>{link.link.heading}</h2>
                   {
                     link.link.links.map((a, i) => (
-                      <li className='editList text-[rgb(137,136,140)] font-normal pb-3 text-[14px]'>{a}</li>
+                      <li key={i} className='editList text-[rgb(137,136,140)] font-normal pb-3 text-[14px]'>{a}</li>
                     ))
                   }
                 </div>

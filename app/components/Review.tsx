@@ -7,15 +7,19 @@ import ReviewContent from './ReviewDetails';
 import Image from 'next/image';
 
 const Review = () => {
+    const [currentReview, setCurrentReview] = useState(0);
 
-    const [currentReview, setCurrentReview] = useState(0)
+    // Calculate the last index dynamically
+    const lastIndex = ReviewContent.length - 1;
 
     const showNextReview = () => {
-     currentReview !== 4 ?   setCurrentReview((prev) => prev + 1) : setCurrentReview(0)
-    }
+        setCurrentReview((prev) => (prev === lastIndex ? 0 : prev + 1));
+    };
+
     const showPrevReview = () => {
-        currentReview !== 0 ? setCurrentReview((prev) => prev - 1) : setCurrentReview(4)
-    }
+        setCurrentReview((prev) => (prev === 0 ? lastIndex : prev - 1));
+    };
+
 
     return (
         <div>
