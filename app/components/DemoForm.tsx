@@ -62,19 +62,19 @@
 
 
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import { FaArrowRight } from "react-icons/fa";
 
 const DemoForm = () => {
-    const [fName, setFName] = useState<string>('')
-    const [email, setEmail] = useState<string>('')
-    const [selectedSize, setSelectedSize] = useState<string>('')
-    const [selectedRole, setSelectedRole] = useState<string>('')
-    const [userInterest, setUserInterest] = useState<string>('')
+    // const [fName, setFName] = useState<string>('')
+    // const [email, setEmail] = useState<string>('')
+    // const [selectedSize, setSelectedSize] = useState<string>('')
+    // const [selectedRole, setSelectedRole] = useState<string>('')
+    // const [userInterest, setUserInterest] = useState<string>('')
 
-    const handleContinue = () => {
-        // Handle the continue action
-    }
+    // const handleContinue = () => {
+    //     // Handle the continue action
+    // }
 
     return (
         <div className='min-h-screen flex items-center justify-center'>
@@ -140,8 +140,8 @@ const DemoForm = () => {
                         ></textarea>
                     </div>
                     <button
-                        className='flex items-center justify-center gap-4 bg-white text-black p-3 rounded-md w-full mt-4 hover:bg-grsy-100 transition'
-                        onClick={handleContinue}
+                        className='flex items-center justify-center gap-4 bg-white text-black p-3 rounded-md w-full mt-0 hover:bg-grsy-100 transition'
+                       
                     >
                         <span>Continue</span> <FaArrowRight />
                     </button>

@@ -1,15 +1,15 @@
-import React from 'react'
+// import React from 'react'
 
-interface Props{
+// interface Props{
 
-}
-const Register = ({}:Props) => {
+// }
+// const Register = ({}:Props) => {
 
-  return (
-    <div>
+//   return (
+//     <div>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Register
+// export default Register

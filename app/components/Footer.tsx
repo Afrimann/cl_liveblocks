@@ -14,7 +14,7 @@ const Footer = () => {
           <div className='firstGroup'>
             {
               FirstGroup.map((link, index) => (
-                <div className='mb-[20px]'>
+                <div key={index} className='mb-[20px]'>
                   <h2 className='font-bold mb-2'>{link.link.heading}</h2>
                   {link.link.links.map((a, i) => (
                     <li className='editList text-[rgb(137,136,140)] font-normal pb-3 text-[14px]'>

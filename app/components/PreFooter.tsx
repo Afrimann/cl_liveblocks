@@ -1,6 +1,5 @@
 import React from 'react'
-import footerbg from '../components/images/prefooterimg.webp'
-import Image from 'next/image'
+
 const PreFooter = () => {
   return (
     <div className='h-[100vh] w-full text-white flex flex-col items-center justify-center border-b border-opacity-15'>

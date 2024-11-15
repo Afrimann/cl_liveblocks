@@ -3,7 +3,6 @@ import zapier from '../components/images/download (13).svg'
 import salesloft from '../components/images/download (11).svg'
 import hourOne from '../components/images/download (5).svg'
 import hashnode from '../components/images/download (6).svg'
-import agility from '../components/images/download (1).svg'
 import dock from '../components/images/download (16).svg'
 import lukeThomas from '../components/images/luke-thomas (1).jpg'
 
@@ -15,6 +14,7 @@ interface Props {
     name: string,
     position: string
 }
+
 
 export const ReviewContent: Props[] = [
     {
@@ -55,7 +55,7 @@ export const ReviewContent: Props[] = [
         logo: hourOne,
         name: 'Sandeep Panda',
         position: 'CTO at Hashnode',
-        reviewText: 'Choosing Liveblocks was a no-brainer; their expertise in collaborative editing and realtime infrastructure is unmatched.”'
+        reviewText: '"Choosing Liveblocks was a no-brainer; their expertise in collaborative editing and realtime infrastructure is unmatched.”'
     }
 ]
 

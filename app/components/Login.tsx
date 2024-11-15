@@ -1,16 +1,16 @@
-import React from 'react'
+// import React from 'react'
 
-interface Props{
+// interface Props{
 
-}
-const Login = ({}:Props) => {
+// }
+// const Login = ({}:Props) => {
   
 
-  return (
-    <div>
+//   return (
+//     <div>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Login
+// export default Login
